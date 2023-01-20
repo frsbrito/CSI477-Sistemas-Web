@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5x;
+}
+
+th {
+    font-size: 1.2rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: gray;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tbody tr:hover {
+    background-color: black;
+}

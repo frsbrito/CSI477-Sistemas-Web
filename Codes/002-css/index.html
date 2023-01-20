@@ -30,11 +30,29 @@
             h1, h2, h3 {
                 margin-top: 0;
             }
-
+            
             div > p {
                 background-color: #08ff3a;
             }
 
+            a:link {
+                text-decoration: none;
+            }
+
+            .flexbox {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .flexbox div {
+                width: 5rem;
+                background-color: #c4c4c4;
+                margin: 2rem;
+                text-align: center;
+                height: 3rem;
+                border-radius: 0.3rem;
+            }
 
         </style>
 
@@ -48,10 +66,16 @@
         <h2 class="maior">Sistemas Web I</h2>
         <h3 class="destaque">Início do curso</h3>
 
-        <div id="links">
-            <a href="./geral/sobre.html">Sobre</a>
-            <a href="./cadastro/pessoas.html">Cadastro de pessoas</a>
-            <a href="https://www.ufop.br" target="_blank">UFOP</a>
+        <div class="flexbox" id="links">
+            <div>
+                <a href="./geral/sobre.html">Sobre</a>
+            </div>
+            <div>
+                <a href="./cadastro/pessoas.html">Cadastro de pessoas</a>
+            </div>
+            <div>
+                <a href="https://www.ufop.br" target="_blank">UFOP</a>
+            </div>
         </div>
 
         <div id="imagens">
