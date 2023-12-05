@@ -1,5 +1,3 @@
-// https://dbdiagram.io/d/630d077e0911f91ba5ecf743
-
 //// https://dbdiagram.io/d
 //// -- LEVEL 1
 //// -- Tables and References
@@ -7,8 +5,10 @@
 //// -- LEVEL 1
 //// -- Tables and References
 
+// https://dbdiagram.io/d/CSI606-sistema-doacao-sangue-630d077e0911f91ba5ecf743
+
 // Creating tables
-Table tipos_sanguineos as T {
+Table tipos_sanguineos as TS {
   id int [pk, increment] // auto-increment
   tipo varchar
   fator varchar
@@ -38,9 +38,9 @@ Table pessoas as P {
   rua varchar
   numero varchar
   complemento varchar
-  documento varchar
+  rg varchar
   cidade_id int [ref:> CID.id]
-  tipo_id int [ref:> T.id]
+  tipo_id int [ref:> TS.id]
   created_at timestamp
   updated_at timestamp
 }
@@ -56,7 +56,7 @@ Table locais_coleta as LC {
   updated_at timestamp
  }
 
-Table agendamentos as AGE {
+Table doacoes as DOE {
   id int [pk, increment] // auto-increment
   pessoa_id int [ref: > P.id]
   local_id int [ref: > LC.id]
@@ -64,4 +64,3 @@ Table agendamentos as AGE {
   created_at timestamp
   updated_at timestamp
  }
-

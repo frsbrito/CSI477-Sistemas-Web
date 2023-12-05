@@ -6,7 +6,7 @@
 
 - Com isso, é possível executar códigos JS no *back-end* por meio de diversos módulos desenvolvidos por diferentes comunidades.
 
-- Você verá diversas aplicações e *frameworks* que utilizam Node.js, como o *React*, *ExpressJS*, *AdonisJS*, dentre outros.
+- Você verá diversas aplicações e *frameworks* que utilizam Node.js, como o *React*, *ExpressJS*, *Prisma*, *AdonisJS*, dentre outros.
 
 ## Conceitos e definições
 
@@ -15,6 +15,29 @@
 - *Node built-in objects*: OS, HTTP, Path, File system, dentre outros.
 
 - *Node.js ECMAScript compatibility tables*: <https://node.green/>
+
+### JavaScript is a single-thread language
+
+```javascript
+ console.log('A');
+ 
+ setTimeout(() => {
+  console.log('B');
+ }, 3000);
+  
+ console.log('C');
+```
+
+#### Output
+
+```javascript
+A 
+C 
+B
+```
+
+ > ![JavaScript runtime environment](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210122115136/Untitled-Diagram3.jpg)  
+ > From: [Why JavaScript is a single-thread language that can be non-blocking ?](https://www.geeksforgeeks.org/why-javascript-is-a-single-thread-language-that-can-be-non-blocking/)
 
 ### Event Loop
 
@@ -45,41 +68,39 @@ A lista completa está disponível [aqui](https://nodejs.dev/learn/how-much-java
 
 Referência e outras informações [aqui](https://nodejs.dev/en/learn/an-introduction-to-the-npm-package-manager).
 
-## API RESTful com ExpressJs
+## Node.js Project
 
-- REST: *REpresentational State Transfer.* (Roy Fielding).
+Uma sugestão de estrutura de projeto está definida [aqui](./nodejs-project.md).
 
-- RESTful: web service que obedece a arquitetura e as restrições REST.
+## Deno
 
-- Operações: *POST, GET, PUT* e *DELETE*.
+O [Deno](https://deno.land/) é outro ambiente de execução JavaScript, TypeScript e [WebAssembly](https://webassembly.org/) desenvolvido também com a ajuda do *Ryan Dahl*. O motor V8 também foi utilizando, agora com implementações em [Rust](https://www.rust-lang.org/).
 
-- Etapas:
+Este ambiente foi anunciando em 2018 na JSConf por *Ryan Dhal* a partir da seguinte palestra: [*10 Things I Regret About Node.js - Ryan Dahl - JSConf EU*](https://youtu.be/M3BM9TB-8yA). Além de indicar alguns problemas de *design* do Node, algumas possíveis questões de controle e de segurança acerca do gerenciamento de dependências (*npm*, *node_modules*).  
 
-    1. Estrutura do projeto
-    1. Configuração do [Express](https://expressjs.com/)
-    1. Criação de rotas
-    1. [Modelo proposto do banco de dados](https://dbdiagram.io/d/630d077e0911f91ba5ecf743)
-    1. ORM - [Prisma.io](https://www.prisma.io)
-    1. Construção das tabelas e relacionamentos
-    1. *Migrations*
+O Deno suporta apenas *ESModules*, *URLs* para dependências locais e remotas, não necessita de um gerenciador de dependências (mas, as últimas versões suportam o *npm*), possui restrições de acesso ao sistema de arquivo e à rede por padrão, além de outros fatores.
 
-### Estrutura do projeto (em construção)
+## Bun
 
-```text
-prisma
-src
-  |_ database
-        |_ client.js  
-  |_ model/*
-  |_ controller/*
-        |_[C,R,U,D]_*_Controller.js
-  |_ routes/*
-  |_ server.js
-```
+O [Bun](https://bun.sh/) é o mais recente ambiente de execução JavaScript e TypeScript. Ele é escrito utilizando a linguagem [Zig](https://ziglang.org/) e utiliza o motor [JavaScriptCore/WebKit](https://developer.apple.com/documentation/javascriptcore) da Apple. O Node.js e o Deno utilizam o motor V8.
+
+O Bun possui compatibilidade com módulos ESM e Commonjs, além de suportar diversas APIs nativamente. O ganho de performance pode estar associado ao motor utilizado.
+
+Os [resultados](https://twitter.com/jarredsumner/status/1499225725492076544) sugerem que ele tem uma performance melhor que o Node.js e o Deno. Contudo, o Bun ainda está em versão inicial (1.0.14 enquanto eu escrevo) e eu sugiro não utilizá-lo (ainda) como principal *runtime* em projetos em produção.
+
+Enfim, ele carece de mais testes antes de se tornar uma opção principal. Use, mas com cuidado!
 
 ## Outras Referências
 
 [Código Fonte TV: Node.js // Dicionário do Programador](https://youtu.be/vYekSMBCCiM)
+
+[Código Fonte TV: Deno (A alternativa ao Node.js !?) // Dicionário do Programador](https://youtu.be/fVoH6rFU6zw)
+
+[Código Fonte TV: Bun: O JavaScript Nunca Mais Será o Mesmo!](https://youtu.be/MAWk0C5_3Bc?si=q02nb9FodNqauILo)
+
+[Código Fonte TV: Node, Deno e Bun: A Batalha dos Runtimes JavaScript [AO VIVO]](https://www.youtube.com/live/RQ83zcTACnw?si=M-OufQBDCO5tx1sJ)
+
+[Deno land - Youtube channel](https://www.youtube.com/@deno_land/)
 
 [Felipe Rocha - dicasparadevs: Curso de Node.js Para Completos Iniciantes](https://youtu.be/IOfDoyP1Aq0)
 

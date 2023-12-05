@@ -1,110 +1,99 @@
-<html>
-    <head>
-        <title>Introdução ao HTML</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
 
-        <style>
+    <!-- CSS Embedded -->
+    <style>
 
-            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        * {
+            margin: 0rem;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-            html {
-                font-family: 'Roboto', sans-serif;
-                font-size: 22px;
-            }
+        h1, h2 {
+            text-align: center;
+        }
 
+        .destaque {
+            background-color: blue;
+        }
+        
+        h2 + p {
+            background-color: #B2C8BA;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 16pt;
+        }
 
-            /* comentário */
-            h2 {
-                color:#0c8f40; 
-            }
+        p + p {
+            text-align: center;
+        }
 
-            .destaque {
-                color: red;
-            }
+        footer > p {
+            background-color: #D2E3C8;
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+            padding: 1.2rem;
+            margin: 1.5rem;
+        }
 
-            p.maior {
-                font-size: 22pt;
-            }
+        p::first-line {
+            text-transform: uppercase;
+        }
 
-            body {
-                margin: 0;
-            }
+        h2:hover {
+            border: 1px solid #000;
+            color: #B2C8BA;
+        }
+        
+        input {
+            border: 1px solid #c6c6c6;
+            border-radius: 10px;
+            width: 80%;
+            font-size: 1.5rem;
+        }
 
-            h1, h2, h3 {
-                margin-top: 0;
-            }
-            
-            div > p {
-                background-color: #08ff3a;
-            }
+        input:focus {
+            background-color: #D2E3C8;
+            border: 0px;
+            outline: 2px solid #0000ff;
+        }
 
-            a:hover {
-                background-color: #0674fe;
-                font-weight: bold;
-            }
+    </style>
 
-            a:visited {
-                background-color: #c4c4c4;
-            }
+</head>
+<body>
 
-            a:link {
-                text-decoration: none;
-            }
+    <nav>
+        <input type="text" name="pesquisa" id="pesquisa">
+        <button>Pesquisar</button>
+    </nav>
 
-            .flexbox {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-            }
+    <!-- CSS inline -->
+    <h1 style="color: #86A789">Sistema Web</h1>
 
-            .flexbox div {
-                width: 10rem;
-                background-color: #c4c4c4;
-                margin: 2rem;
-                text-align: center;
-                align-self: center;                
-                height: 3rem;
-                line-height: 1rem;
-                border-radius: 0.3rem;
-            }
+    <h2>Introdução ao CSS</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, excepturi. Porro illo exercitationem recusandae odio voluptatem, pariatur ipsum distinctio placeat necessitatibus sit eligendi aperiam tempora repudiandae ducimus repellendus molestias tempore?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi culpa laudantium explicabo? Maxime, animi? Quisquam ea, qui quod quas voluptatibus sint corporis explicabo facilis, doloremque officiis, excepturi ad deleniti reprehenderit!</p>
 
-        </style>
-
-    </head>
-
-    <body>
+    <h3>Conceitos</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel impedit ratione aliquam sapiente similique unde asperiores nulla neque numquam? Accusamus incidunt esse quo necessitatibus libero dignissimos. Ipsum suscipit provident dolorem?</p>
     
-        <!-- comentarios -->
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, atque. Vero ipsum odio nemo ducimus eos placeat saepe quam pariatur adipisci dolorem, autem aliquam dolorum, similique amet quo in rerum.</p>
+    </div>
 
-        <h1 style="font-family: Arial, Helvetica, sans-serif;">Olá, mundo!</h1>
-        <h2 class="maior">Sistemas Web I</h2>
-        <h3 class="destaque">Início do curso</h3>
+    
 
-        <div id="links" class="flexbox">
-            <div>
-                <a href="./geral/sobre.html">Sobre</a>
-            </div>
-            <div>
-                <a href="./cadastro/pessoas.html">Cadastro</a>
-            </div>
-            <div>
-                <a href="./relatorio/pessoas.html">Relatório</a>
-            </div>
-            <div>
-                <a href="https://www.ufop.br" target="_blank">UFOP</a>
-            </div>
-        </div>
+    <footer>
+        <p>Semester 2023/2</p>
+        <p>Desenvolvido com S2</p>
+    </footer>
 
-        <div id="imagens">
-            <img src="https://ufop.br/sites/default/files/site_logo_ufop_txtwte_0.png">
-            <img src="./img/logo.png" alt="Apresenta o logo da empresa">
-        </div>
-
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed laboriosam a dignissimos nihil, quam quidem modi possimus totam, ex, omnis sunt architecto. Officia, esse? Alias reprehenderit nobis architecto ipsa. Voluptatum?</p>
-
-        <div id="conteudo">
-            <p class="maior">Lorem ipsum dolor sit amet consectetur adipisicing elit. In blanditiis non omnis quas suscipit sapiente, est rerum esse animi beatae ad obcaecati dolorem, deleniti nulla atque, nihil ab illum tempora.</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab officia perspiciatis, quam deserunt natus harum fuga sed non, maxime, laboriosam odit sapiente placeat at iure rem ut repudiandae reprehenderit inventore!</p>
-        </div>
-
-    </body>
+</body>
 </html>

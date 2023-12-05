@@ -1,8 +1,8 @@
 # CSI606 - Sistemas WEB I - SI-06
 
-## Período Letivo 2022/2
+## Período Letivo 2023/2
 
-### Prof. Fernando Bernardes de Oliveira, Ph.D.
+### *Prof. Fernando Bernardes de Oliveira, Ph.D.*
 
 ---
 
@@ -21,11 +21,11 @@
         = **Atividades/atividade-pratica/web**  
     - As datas para as entregas estão disponíveis no Moodle.
 
-## Desenvolvimento: Sistema de Controle de Doação de Sangue
+## Desenvolvimento: Sistema de Agendamento de Doação de Sangue
 
-O objetivo deste sistema é controlar o processo de doação de sangue numa determina instituição. O diagrama do banco de dados completo é apresentado na [figura abaixo](../../Codes/database-model/CSI606-sistema-doacao-sangue.png). Você pode acessar também o modelo definido a partir do [DBDiagram](https://dbdiagram.io/d/630d077e0911f91ba5ecf743).
+O objetivo deste sistema é controlar o processo de agendamento de doação de sangue numa determina instituição. O diagrama do banco de dados completo é apresentado na [figura abaixo](./database-model/CSI606-sistema-doacao-sangue.png). Você também pode acessar o modelo definido a partir do [DBDiagram](https://dbdiagram.io/d/CSI606-sistema-doacao-sangue-630d077e0911f91ba5ecf743).
 
-![Diagrama completo do banco de dados](../../Codes/database-model/CSI606-sistema-doacao-sangue.png)
+![Diagrama completo do banco de dados](./database-model/CSI606-sistema-doacao-sangue.png)
 
 Este modelo será utilizado para as duas atividades práticas. O escopo de cada atividade será definido apropriadamente.
 
@@ -33,7 +33,7 @@ Este modelo será utilizado para as duas atividades práticas. O escopo de cada 
 
 ## **Atividade Prática 1**
 
-No caso da **Atividade 1** é esperado que vocês desenvolvam uma API RESTful para as seguintes entidades: *pessoas*, *tipos_sanguineos*, *locais_coleta* e *doacoes*. Vocês pode utilizar o desenvolvimento de *estados* e *cidades* que será realizado em sala de aula. Considere as seguintes operações:
+No caso da **Atividade 1** é esperado que vocês desenvolvam uma *API RESTful* para as seguintes entidades: *tipos_sanguineos*, *pessoas*, *locais_coleta* e *doacoes*. Vocês pode utilizar o desenvolvimento de *estados* e *cidades* que será realizado em sala de aula. Considere as seguintes operações:
 
 - Inserir - *create*
 - Atualizar - *update*
@@ -48,7 +48,7 @@ Sintam-se livres para as escolhas e documentem, por gentileza, utilizando o **RE
 
 ## **Atividade Prática 2**
 
-A Atividade Prática 2 consiste na implementação da interface Web (em *React* ou algum *framework* de sua preferência) das entidades indicadas na **Atividade Prática 1**.
+A Atividade Prática 2 consiste na implementação da interface Web (em *Next.js/React.js* ou outro *framework* de sua preferência) das entidades indicadas na **Atividade Prática 1**.
 
 Sigam, por gentileza, as mesmas recomendações e considerações indicadas na primeira atividade.  
 

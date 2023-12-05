@@ -1,5 +1,7 @@
 # Git and GitHub
 
+- [ByteByteGo - How Git Actually Works: Explained in 4 Minutes](https://youtu.be/e9lnsKot_SQ?si=U35Z4P8vRT5eEj7r)
+
 - [Como criar um README para o seu perfil do GitHub | Alura Cursos Online](https://www.alura.com.br/artigos/como-criar-um-readme-para-seu-perfil-github)
 
 - [Como escrever um README incrível no seu Github | Alura Cursos Online](https://www.alura.com.br/artigos/escrever-bom-readme)
@@ -29,7 +31,6 @@
 - [Podcast: Guia do Iniciante em Github – Hipsters #184](https://hipsters.tech/guia-do-iniciante-em-github-hipsters-184)
 
 - [Podcast: Integração Contínua, Deploy Contínuo e Github Actions - Hipsters #213](https://hipsters.tech/integracao-continua-deploy-continuo-e-github-actions-hipsters-213/)
-
 
 - [Rafaella Ballerini - O QUE É GIT E GITHUB? - definição e conceitos importantes 1/2](https://youtu.be/DqTITcMq68k)
 
