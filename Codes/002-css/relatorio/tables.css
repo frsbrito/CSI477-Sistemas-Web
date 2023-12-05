@@ -3,12 +3,12 @@ table {
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-collapse: collapse;
 }
 
 th, td {
-    padding: 5x;
+    padding: 10px;
 }
 
 th {
@@ -16,13 +16,9 @@ th {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: gray;
-}
-
-tbody tr:nth-child(even) {
-    background-color: lightgray;
+    background-color: #e6e2e2;
 }
 
 tbody tr:hover {
-    background-color: black;
+    background-color: #c5c5c5;
 }
